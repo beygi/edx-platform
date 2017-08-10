@@ -92,7 +92,6 @@ class RegistrationView(APIView):
 
     @method_decorator(ensure_csrf_cookie)
     def get(self, request):
-
         return HttpResponse(RegistrationFormFactory().get_registration_form(request).to_json(),
                             content_type="application/json")
 
